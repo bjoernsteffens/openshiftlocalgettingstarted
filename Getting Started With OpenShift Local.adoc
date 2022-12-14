@@ -11,11 +11,11 @@ If you can run it on your laptop, it is designed for testing, trying things out 
 == Prerequisites for installing OpenShft Local
 The hardware requirements are very low but that does not guarantee that OpenShift Local will start on your system. I have two Macbooks, one with Intel CPUs and 64 GB RAM and an M1 with only 16 GB RAM. OpenShift does not launch on my M1 most likely due to insufficient resources as I have a few other things running on it too.
 
-The best thing you can do because the installation is soo easy, is to install it and see if it starts or not and then you have your answer within minutes.
+The best thing you can do because the installation is so easy, is to install it and see if it starts or not and then you have your answer within minutes.
 
 TIP: The old name of OpenShift Local is CRC (Code Ready Containers). You will see references to CRC here and there because the name of the product recently changed.
 
-.Links
+.Links:
 - https://developers.redhat.com/products/openshift-local/overview[Overview]
 - https://crc.dev/crc/[RedHat Getting Started Guide]
 - https://access.redhat.com/documentation/en-us/red_hat_openshift_local/2.11/html/getting_started_guide/installation_gsg[Installation]
@@ -23,7 +23,7 @@ TIP: The old name of OpenShift Local is CRC (Code Ready Containers). You will se
 
 In essence this is what you need to be able to launch OpenShift Local
 
-.Hardware Resources
+.Hardware Resources:
 * 4 physical CPU cores
 * 9 GB of free memory
 * 35 GB of storage space
@@ -39,19 +39,22 @@ https://access.redhat.com/documentation/en-us/red_hat_openshift_local/2.5/html/g
 == Configuring and starting OpenShift Local
 == Completely removing OpenShift local from a Macbook
 
-Use the command line
+.Use the command line
+[source, sh]
+----
 eval $(crc oc-env)
 crc stop
 crc delete
-crc cleanup #This does part of the left-over-cleanup on disk
+crc cleanup # This does part of the left-over-cleanup on disk
 rm -rf ~/.crc
+----
 
 Quit the application on the desktop
 Delete the App by dragging and dropping to bin or using CleanMyMac
 
 Look for any leftover here to really make sure you get everything off of the machine
 
-.File List
+.File List:
 - ~/Library/
 - ~/Library/Caches/
 - ~/Library/Preferences/
@@ -72,7 +75,7 @@ rm -rf {whatever you find with "redhat"}
 
 
 == AAA
-== BBB
-== CCC
-== DDD
+== Connecting to image repos
+== Downloading images from repos
+== Deploying containers from images and source code
 == EEE
