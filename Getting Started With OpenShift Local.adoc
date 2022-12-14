@@ -4,11 +4,73 @@ Bjoern Steffens | December 2022
 :icons: font
 :toc: left
 
+== Why OpenShift Local?
+If you can run it on your laptop, it is designed for testing, trying things out and learn withouth having to have access to a larger Cloud setup. Think of it a little bit as a community edition for your own private purpose that you always have in your computer bag.
+
+
 == Prerequisites for installing OpenShft Local
+The hardware requirements are very low but that does not guarantee that OpenShift Local will start on your system. I have two Macbooks, one with Intel CPUs and 64 GB RAM and an M1 with only 16 GB RAM. OpenShift does not launch on my M1 most likely due to insufficient resources as I have a few other things running on it too.
+
+The best thing you can do because the installation is soo easy, is to install it and see if it starts or not and then you have your answer within minutes.
+
+TIP: The old name of OpenShift Local is CRC (Code Ready Containers). You will see references to CRC here and there because the name of the product recently changed.
+
+.Links
+- https://developers.redhat.com/products/openshift-local/overview[Overview]
+- https://crc.dev/crc/[RedHat Getting Started Guide]
+- https://access.redhat.com/documentation/en-us/red_hat_openshift_local/2.11/html/getting_started_guide/installation_gsg[Installation]
+- https://access.redhat.com/documentation/en-us/red_hat_openshift_local/2.11#configuring-the-instance_gsg[Product Documentation]
+
+In essence this is what you need to be able to launch OpenShift Local
+
+.Hardware Resources
+* 4 physical CPU cores
+* 9 GB of free memory
+* 35 GB of storage space
 
 == Locating and downloading the code
+You will need a RedHat subscription in order to be able to download the code. 
+
+Have your RedHat login ready (parter account) and go to this link and download the appropriate package for your laptop OS. Mind to also download the pull secret. You will need it during the installation.
+
+https://access.redhat.com/documentation/en-us/red_hat_openshift_local/2.5/html/getting_started_guide/installation_gsg[Software Download]
+
 == Installing OpenShift Local
 == Configuring and starting OpenShift Local
+== Completely removing OpenShift local from a Macbook
+
+Use the command line
+eval $(crc oc-env)
+crc stop
+crc delete
+crc cleanup #This does part of the left-over-cleanup on disk
+rm -rf ~/.crc
+
+Quit the application on the desktop
+Delete the App by dragging and dropping to bin or using CleanMyMac
+
+Look for any leftover here to really make sure you get everything off of the machine
+
+.File List
+- ~/Library/
+- ~/Library/Caches/
+- ~/Library/Preferences/
+- ~/Library/Application Support/
+- ~/Library/Application Support/CrashReporter/
+- ~/Library/Saved Application State/
+
+.Shell Command to run
+[source,sh]
+----
+# Find the left over first
+ls -altr ~/Library | grep -i red
+rm -rf {whatever you find with "redhat"}
+
+# Reboot the machine
+# Reinstall OpenShift local if needed 
+----
+
+
 == AAA
 == BBB
 == CCC
