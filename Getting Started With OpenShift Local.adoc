@@ -1,5 +1,5 @@
 = Getting Started with OpenShift Local
-Bjoern Steffens
+Bjoern Steffens | December 2022
 :doctype: book
 :icons: font
 :toc: left
