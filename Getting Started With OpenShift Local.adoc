@@ -1,0 +1,16 @@
+= Getting Started with OpenShift Local
+Bjoern Steffens
+:doctype: book
+:icons: font
+:toc: left
+
+== Prerequisites for installing OpenShft Local
+
+== Locating and downloading the code
+== Installing OpenShift Local
+== Configuring and starting OpenShift Local
+== AAA
+== BBB
+== CCC
+== DDD
+== EEE
