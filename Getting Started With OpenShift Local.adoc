@@ -4,11 +4,11 @@ Bjoern Steffens | December 2022
 :icons: font
 :toc: left
 
-== Why OpenShift Local?
+== Why OpenShift local?
 If you can run it on your laptop, it is designed for testing, trying things out and learn withouth having to have access to a larger Cloud setup. Think of it a little bit as a community edition for your own private purpose that you always have in your computer bag.
 
 
-== Prerequisites for installing OpenShft Local
+== Prerequisites for installing OpenShift local
 The hardware requirements are very low but that does not guarantee that OpenShift Local will start on your system. I have two Macbooks, one with Intel CPUs and 64 GB RAM and an M1 with only 16 GB RAM. OpenShift does not launch on my M1 most likely due to insufficient resources as I have a few other things running on it too.
 
 The best thing you can do because the installation is so easy, is to install it and see if it starts or not and then you have your answer within minutes.
@@ -35,8 +35,25 @@ Have your RedHat login ready (parter account) and go to this link and download t
 
 https://access.redhat.com/documentation/en-us/red_hat_openshift_local/2.5/html/getting_started_guide/installation_gsg[Software Download]
 
-== Installing OpenShift Local
-== Configuring and starting OpenShift Local
+image::./images/software_download.jpg[alt=ls,width=720,height=480]
+
+== Installing OpenShift local
+The installation is very simple and consists of 1) the installation and 2) configuration. The configuration part can take several minutes to complete depending how powerful our laptop is. On my MacBook Pro 16" it took approximately 15 Minutes to complete the second configuration part before I could start and access the "mini cluster".
+
+image::./images/install_01.jpg[alt=ls,width=720,height=480]
+image::./images/install_02.jpg[alt=ls,width=720,height=480]
+image::./images/install_03.jpg[alt=ls,width=720,height=480]
+image::./images/install_04.jpg[alt=ls,width=720,height=480]
+image::./images/install_05.jpg[alt=ls,width=720,height=480]
+image::./images/install_06.jpg[alt=ls,width=720,height=480]
+image::./images/install_07.jpg[alt=ls,width=720,height=480]
+image::./images/install_08.jpg[alt=ls,width=720,height=480]
+image::./images/install_09.jpg[alt=ls,width=720,height=480]
+image::./images/install_10.jpg[alt=ls,width=720,height=480]
+image::./images/install_11.jpg[alt=ls,width=720,height=480]
+image::./images/install_12.jpg[alt=ls,width=720,height=480]
+image::./images/install_13.jpg[alt=ls,width=720,height=480]
+
 == Completely removing OpenShift local from a Macbook
 
 .Use the command line
@@ -49,12 +66,11 @@ crc cleanup # This does part of the left-over-cleanup on disk
 rm -rf ~/.crc
 ----
 
-Quit the application on the desktop
-Delete the App by dragging and dropping to bin or using CleanMyMac
+.Steps to remove left-over if still present:
+- Quit the application on the desktop
+- Delete the App by dragging and dropping to bin or using CleanMyMac
 
-Look for any leftover here to really make sure you get everything off of the machine
-
-.File List:
+.Look for any leftover here to really make sure you get everything off of the machine:
 - ~/Library/
 - ~/Library/Caches/
 - ~/Library/Preferences/
@@ -62,28 +78,29 @@ Look for any leftover here to really make sure you get everything off of the mac
 - ~/Library/Application Support/CrashReporter/
 - ~/Library/Saved Application State/
 
-.Shell Command to run
-[source,sh]
+.Shell command to run to find any remaining lefter overs
+[source,terminal]
 ----
 # Find the left over first
 ls -altr ~/Library | grep -i red
 rm -rf {whatever you find with "redhat"}
 
 # Reboot the machine
-# Reinstall OpenShift local if needed 
+# Reinstall and recofigure OpenShift local if required 
 ----
 
-== Connecting to image repos
-== Downloading images from repos
-== Deploying containers from images and source code
-== Appendix - AsciiDoctor
-=== What is asciidoc
-AsciiDoc can a little bit more than Markdown and lends itself a bit better to technical documenation and collaboration across tools like Github. The syntax is a bit more comprehensive vs Markdown but pays off very swiftly when your documentation gets a little bit more complex and intertwined.
+== How far can you take OpenShift Local?
+Recently Rhett Widurski and Michael Klug hosted a few really great education sessions teaching us how to manage a real cluster beast worth of OpenShift. I was able to do all those exercises on my OpenShift local installation so it is rather powerful but of course only intended for test and development purposes. Having said that, you should not have to go and look for a productive cluser before you can try something out, this deployment type should sufficice for most simple use cases.
 
-AsciiDoc is opensource but around since many years and is getting more and more traction. There are standardisation and communities working the tool contigiously hence it is something worth while to look into.
+
+== Appendix - AsciiDoctor
+=== What is AsciiDoc
+AsciiDoc can more than Markdown and lends itself better to technical documenation and collaboration across tools like Github. The syntax is more comprehensive vs Markdown and th learning investement pays off very swiftly when your documentation gets complex and intertwined.
+
+AsciiDoc is opensource but has been around since many years and is getting better traction. There are standardisation and communities working the tool contigiously hence it is something worth while to look into.
 
 === How do you edit and preview asciidoc files?
-There are plugins to a few IDEs and the most prominent one is Visual Studio Code, where you can edit and live-preview the content.
+There are plugins to a few IDEs and the most prominent one is Visual Studio Code, where you can edit and live-preview the content. See AsciiDoc toolchain below how to convert an adoc file into other various formats.
 
 .Links
 - https://asciidoc.org/ [AsciiDoc]
@@ -94,14 +111,14 @@ There are plugins to a few IDEs and the most prominent one is Visual Studio Code
 === What is the asciidoc toolchain?
 Editing an adoc file in Visual Studio Code, you need to transform the file into something consumable. 
 
-TIP: The adoc file is rendered by Github so you can point to it and share the link and your it can be consumed withouth having to first install an IDE. Just like the file you are reading right now.
+TIP: The adoc file is rendered by Github so you can point to it and share the link and it can be consumed withouth having to first needing to install an IDE. Just like the file you are reading now.
 
 .The most popular formats are:
 - pdf
 - html
 - epub
 
-You will need to install the command line toolchain and use a very few and easy command to transform the adoc file into one or more of the mentioned formats above.
+You will need to install the command line toolchain and use a very few but easy command to transform the adoc file into one or more of the mentioned formats above.
 
 .Installation instructions
 - https://docs.asciidoctor.org/asciidoctor/latest/install/macos/[Getting the toolchain installed]
@@ -124,5 +141,5 @@ brew install asciidoctor-epub3
 > asciidoctor "Getting\ Started\ With\ OpenShift\ Local.adoc"  
 ----
 
-image::./images/asciidoc_convert_output_samples.jpg[[alt=ls,width=720,height=480]]
-image::./images/asciidoc_convert_output_samples_epub.jpg[[alt=mobile,width=420,height=120]]
+image::./images/asciidoc_convert_output_samples.jpg[alt=ls,width=720,height=480]
+image::./images/asciidoc_convert_output_samples_epub.jpg[alt=mobile,width=420,height=120]
