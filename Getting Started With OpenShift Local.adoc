@@ -5,11 +5,11 @@ Bjoern Steffens | December 2022
 :toc: left
 
 == Why OpenShift local?
-If you can run it on your laptop, it is designed for testing, trying things out and learn withouth having to have access to a larger Cloud setup. Think of it a little bit as a community edition for your own private purpose that you always have in your computer bag.
+If you can run it on your laptop, it is designed for testing, trying things out and learn without having to have access to a larger Cloud setup. Think of it a little bit as a community edition for your own private purpose that you always have in your computer bag.
 
 
 == Prerequisites for installing OpenShift local
-The hardware requirements are very low but that does not guarantee that OpenShift Local will start on your system. I have two Macbooks, one with Intel CPUs and 64 GB RAM and an M1 with only 16 GB RAM. OpenShift does not launch on my M1 most likely due to insufficient resources as I have a few other things running on it too.
+The hardware requirements are very low but that does not guarantee that OpenShift Local will start on your system. I have two MacBooks , one with Intel CPUs, 64 GB RAM and an M1 with only 16 GB RAM. OpenShift does not launch on my M1 most likely due to insufficient resources as I have a few other things running on it too.
 
 The best thing you can do because the installation is so easy, is to install it and see if it starts or not and then you have your answer within minutes.
 
@@ -29,7 +29,7 @@ In essence this is what you need to be able to launch OpenShift Local
 * 35 GB of storage space
 
 == Locating and downloading the code
-You will need a RedHat subscription in order to be able to download the code. 
+You will need a RedHat subscription to be able to download the code. 
 
 Have your RedHat login ready (parter account) and go to this link and download the appropriate package for your laptop OS. Mind to also download the pull secret. You will need it during the installation.
 
@@ -53,6 +53,8 @@ image::./images/install_10.jpg[alt=ls,width=720,height=480]
 image::./images/install_11.jpg[alt=ls,width=720,height=480]
 image::./images/install_12.jpg[alt=ls,width=720,height=480]
 image::./images/install_13.jpg[alt=ls,width=720,height=480]
+
+#Add images here how it looks like when it is installed and how to start it through the menu-bar icon#
 
 == Completely removing OpenShift local from a Macbook
 
@@ -90,14 +92,14 @@ rm -rf {whatever you find with "redhat"}
 ----
 
 == How far can you take OpenShift Local?
-Recently Rhett Widurski and Michael Klug hosted a few really great education sessions teaching us how to manage a real cluster beast worth of OpenShift. I was able to do all those exercises on my OpenShift local installation so it is rather powerful but of course only intended for test and development purposes. Having said that, you should not have to go and look for a productive cluser before you can try something out, this deployment type should sufficice for most simple use cases.
+Recently Rhett Widurski and Michael Klug hosted a few great education sessions teaching us how to manage a real cluster beast worth of OpenShift. I was able to do all those exercises on my OpenShift local installation, so it is rather powerful but of course only intended for test and development purposes. Having said that, you should not have to go and look for a productive cluster before you can try something out, this deployment type should suffice for most simple use cases.
 
 
 == Appendix - AsciiDoctor
 === What is AsciiDoc
-AsciiDoc can more than Markdown and lends itself better to technical documenation and collaboration across tools like Github. The syntax is more comprehensive vs Markdown and th learning investement pays off very swiftly when your documentation gets complex and intertwined.
+AsciiDoc can more than Markdown and lends itself better to technical documentation and collaboration across tools like Github. The syntax is more comprehensive vs Markdown and the learning investment pays off very swiftly when your documentation gets complex and intertwined.
 
-AsciiDoc is opensource but has been around since many years and is getting better traction. There are standardisation and communities working the tool contigiously hence it is something worth while to look into.
+AsciiDoc is opensource but has been around since many years and is getting better traction. There are standardization and communities working the tool contagiously hence it is something worthwhile to look into.
 
 === How do you edit and preview asciidoc files?
 There are plugins to a few IDEs and the most prominent one is Visual Studio Code, where you can edit and live-preview the content. See AsciiDoc toolchain below how to convert an adoc file into other various formats.
@@ -111,7 +113,7 @@ There are plugins to a few IDEs and the most prominent one is Visual Studio Code
 === What is the asciidoc toolchain?
 Editing an adoc file in Visual Studio Code, you need to transform the file into something consumable. 
 
-TIP: The adoc file is rendered by Github so you can point to it and share the link and it can be consumed withouth having to first needing to install an IDE. Just like the file you are reading now.
+TIP: The adoc file is rendered by Github so you can point to it and share the link and it can be consumed without having to first needing to install an IDE. Just like the file you are reading now.
 
 .The most popular formats are:
 - pdf
