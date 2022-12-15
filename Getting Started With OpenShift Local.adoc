@@ -124,5 +124,5 @@ brew install asciidoctor-epub3
 > asciidoctor "Getting\ Started\ With\ OpenShift\ Local.adoc"  
 ----
 
-image::./images/asciidoc_convert_output_samples.jpg[[alt=ls,width=640,height=480]]
-image::./images/asciidoc_convert_output_samples_epub.jpg[[alt=mobile,width=640,height=480]]
+image::./images/asciidoc_convert_output_samples.jpg[[alt=ls,width=720,height=480]]
+image::./images/asciidoc_convert_output_samples_epub.jpg[[alt=mobile,width=420,height=120]]
