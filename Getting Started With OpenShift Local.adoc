@@ -73,9 +73,52 @@ rm -rf {whatever you find with "redhat"}
 # Reinstall OpenShift local if needed 
 ----
 
-
-== AAA
 == Connecting to image repos
 == Downloading images from repos
 == Deploying containers from images and source code
-== EEE
+== Appendix - AsciiDoctor
+=== What is asciidoc
+AsciiDoc can a little bit more than Markdown and lends itself a bit better to technical documenation and collaboration across tools like Github. The syntax is a bit more comprehensive vs Markdown but pays off very swiftly when your documentation gets a little bit more complex and intertwined.
+
+AsciiDoc is opensource but around since many years and is getting more and more traction. There are standardisation and communities working the tool contigiously hence it is something worth while to look into.
+
+=== How do you edit and preview asciidoc files?
+There are plugins to a few IDEs and the most prominent one is Visual Studio Code, where you can edit and live-preview the content.
+
+.Links
+- https://asciidoc.org/ [AsciiDoc]
+- https://asciidoctor.org/[Asciidoctor]
+- https://docs.asciidoctor.org/asciidoctor/latest/[Documentation]
+- https://kate-editor.org/syntax/data/html/asciidoc.adoc.html[Comprehensive Cheat-Sheet and Sample file]
+
+=== What is the asciidoc toolchain?
+Editing an adoc file in Visual Studio Code, you need to transform the file into something consumable. 
+
+TIP: The adoc file is rendered by Github so you can point to it and share the link and your it can be consumed withouth having to first install an IDE. Just like the file you are reading right now.
+
+.The most popular formats are:
+- pdf
+- html
+- epub
+
+You will need to install the command line toolchain and use a very few and easy command to transform the adoc file into one or more of the mentioned formats above.
+
+.Installation instructions
+- https://docs.asciidoctor.org/asciidoctor/latest/install/macos/[Getting the toolchain installed]
+
+
+.Installing the pdf and epub converters
+[source,terminal]
+----
+sudo gem install asciidoctor-pdf
+brew install asciidoctor-epub3
+----
+
+.Shell Commands to convert the file
+[source,terminal]
+----
+# Change to the folder where your adoc file file
+> asciidoctor "Getting\ Started\ With\ OpenShift\ Local.adoc"
+> asciidoctor-epub3 "Getting\ Started\ With\ OpenShift\ Local.adoc"
+> asciidoctor-pdf "Getting\ Started\ With\ OpenShift\ Local.adoc"
+----
