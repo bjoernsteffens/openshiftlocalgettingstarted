@@ -712,14 +712,17 @@ The adoc file is rendered by Github so you can point to it and share the link an
 <div class="listingblock">
 <div class="title">Installing the pdf and epub converters</div>
 <div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">brew install asciidoctor-pdf
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">sudo gem install asciidoctor-pdf
 brew install asciidoctor-epub3</code></pre>
 </div>
 </div>
 <div class="listingblock">
 <div class="title">Shell Commands to convert the file</div>
 <div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal"></code></pre>
+<pre class="highlight"><code class="language-terminal" data-lang="terminal"># Change to the folder where your adoc file file
+&gt; asciidoctor "Getting\ Started\ With\ OpenShift\ Local.adoc"
+&gt; asciidoctor-epub3 "Getting\ Started\ With\ OpenShift\ Local.adoc"
+&gt; asciidoctor-pdf "Getting\ Started\ With\ OpenShift\ Local.adoc"</code></pre>
 </div>
 </div>
 </div>
@@ -728,7 +731,7 @@ brew install asciidoctor-epub3</code></pre>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2022-12-15 04:26:51 +0100
+Last updated 2022-12-15 04:35:47 +0100
 </div>
 </div>
 </body>

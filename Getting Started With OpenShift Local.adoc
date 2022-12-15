@@ -118,7 +118,11 @@ brew install asciidoctor-epub3
 [source,terminal]
 ----
 # Change to the folder where your adoc file file
-> asciidoctor "Getting\ Started\ With\ OpenShift\ Local.adoc"
+
 > asciidoctor-epub3 "Getting\ Started\ With\ OpenShift\ Local.adoc"
-> asciidoctor-pdf "Getting\ Started\ With\ OpenShift\ Local.adoc"
+> asciidoctor-pdf "Getting\ Started\ With\ OpenShift\ Local.adoc"  
+> asciidoctor "Getting\ Started\ With\ OpenShift\ Local.adoc"  
 ----
+
+image::./images/asciidoc_convert_output_samples.jpg[Sample output]
+image::./images/asciidoc_convert_output_samples_epub.jpg[Sample epub on a mobile device]
