@@ -23,6 +23,9 @@ TIP: The old name of OpenShift Local is CRC (Code Ready Containers). You will se
 
 In essence this is what you need to be able to launch OpenShift Local
 
+.Software Resources:
+* Xcode when you install on a Mac
+
 .Hardware Resources:
 * 4 physical CPU cores
 * 9 GB of free memory
