@@ -53,8 +53,14 @@ image::./images/install_10.jpg[alt=ls,width=720,height=480]
 image::./images/install_11.jpg[alt=ls,width=720,height=480]
 image::./images/install_12.jpg[alt=ls,width=720,height=480]
 image::./images/install_13.jpg[alt=ls,width=720,height=480]
+image::./images/install_14.jpg[alt=ls,width=420,height=480]
 
-#Add images here how it looks like when it is installed and how to start it through the menu-bar icon#
+Default user and password is developer / developer
+
+image::./images/install_15.jpg[alt=ls,width=720,height=480]
+image::./images/install_16.jpg[alt=ls,width=720,height=480]
+image::./images/install_17.jpg[alt=ls,width=720,height=480]
+image::./images/install_18.jpg[alt=ls,width=420,height=480]
 
 == Completely removing OpenShift local from a Macbook
 
@@ -122,6 +128,14 @@ TIP: The adoc file is rendered by Github so you can point to it and share the li
 
 You will need to install the command line toolchain and use a very few but easy command to transform the adoc file into one or more of the mentioned formats above.
 
+.Before you install ascoiidoctor you need to install and activate xcode on your mac.
+[source, terminal]
+----
+xcode-select --install
+sudo xcode-select -r
+sudo xcodebuild -license
+----
+
 .Installation instructions
 - https://docs.asciidoctor.org/asciidoctor/latest/install/macos/[Getting the toolchain installed]
 
@@ -130,7 +144,7 @@ You will need to install the command line toolchain and use a very few but easy 
 [source,terminal]
 ----
 sudo gem install asciidoctor-pdf
-brew install asciidoctor-epub3
+sudo gem install asciidoctor-epub3
 ----
 
 .Shell Commands to convert the file
