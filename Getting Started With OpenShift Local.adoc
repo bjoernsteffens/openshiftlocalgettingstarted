@@ -5,11 +5,11 @@ Bjoern Steffens | December 2022
 :toc: left
 
 == Why OpenShift local?
-If you can run it on your laptop, it is designed for testing, trying things out and learn without having to have access to a larger Cloud setup. Think of it a little bit as a community edition for your own private purpose that you always have in your computer bag.
+If you can run it on your laptop, it is designed for testing, trying things out and learn without having to have access to a larger Cloud setup. Think of it a little bit as a community edition for your own private purpose that you always have in your computer bag. Yes, you will need to find out by installing it, if you have sufficient resources to start it on your laptop.
 
 
 == Prerequisites for installing OpenShift local
-The hardware requirements are very low but that does not guarantee that OpenShift Local will start on your system. I have two MacBooks , one with Intel CPUs, 64 GB RAM and an M1 with only 16 GB RAM. OpenShift does not launch on my M1 most likely due to insufficient resources as I have a few other things running on it too.
+The hardware requirements are very low but that does not guarantee that OpenShift Local will start on your system. I have two MacBooks, one with Intel CPUs, 64 GB RAM and an M1 with only 16 GB RAM. OpenShift does not launch on my M1 highly likely to insufficient resources as I have a few other things running on it next to an OpenShift local cluster.
 
 The best thing you can do because the installation is so easy, is to install it and see if it starts or not and then you have your answer within minutes.
 
@@ -40,6 +40,8 @@ image::./images/software_download.jpg[alt=ls,width=720,height=480]
 == Installing OpenShift local
 The installation is very simple and consists of 1) the installation and 2) configuration. The configuration part can take several minutes to complete depending how powerful our laptop is. On my MacBook Pro 16" it took approximately 15 Minutes to complete the second configuration part before I could start and access the "mini cluster".
 
+TIP: Once you have installed xcode and OpenShift local I recommend to reboot your Mac before you start everything.
+
 image::./images/install_01.jpg[alt=ls,width=720,height=480]
 image::./images/install_02.jpg[alt=ls,width=720,height=480]
 image::./images/install_03.jpg[alt=ls,width=720,height=480]
@@ -61,6 +63,7 @@ image::./images/install_15.jpg[alt=ls,width=720,height=480]
 image::./images/install_16.jpg[alt=ls,width=720,height=480]
 image::./images/install_17.jpg[alt=ls,width=720,height=480]
 image::./images/install_18.jpg[alt=ls,width=420,height=480]
+
 
 == Completely removing OpenShift local from a Macbook
 
@@ -103,9 +106,9 @@ Recently Rhett Widurski and Michael Klug hosted a few great education sessions t
 
 == Appendix - AsciiDoctor
 === What is AsciiDoc
-AsciiDoc can more than Markdown and lends itself better to technical documentation and collaboration across tools like Github. The syntax is more comprehensive vs Markdown and the learning investment pays off very swiftly when your documentation gets complex and intertwined.
+AsciiDoc can more than Markdown and lends itself better to technical documentation and collaboration across tools like Github. The syntax is more comprehensive vs Markdown and the learning investment pays off swiftly when your documentation gets complex and intertwined.
 
-AsciiDoc is opensource but has been around since many years and is getting better traction. There are standardization and communities working the tool contagiously hence it is something worthwhile to look into.
+AsciiDoc is OpenSource but has been around since many years and is getting good traction. There are standardization and communities working the tool contagiously hence it is something worthwhile to look into.
 
 === How do you edit and preview asciidoc files?
 There are plugins to a few IDEs and the most prominent one is Visual Studio Code, where you can edit and live-preview the content. See AsciiDoc toolchain below how to convert an adoc file into other various formats.
@@ -117,7 +120,7 @@ There are plugins to a few IDEs and the most prominent one is Visual Studio Code
 - https://kate-editor.org/syntax/data/html/asciidoc.adoc.html[Comprehensive Cheat-Sheet and Sample file]
 
 === What is the asciidoc toolchain?
-Editing an adoc file in Visual Studio Code, you need to transform the file into something consumable. 
+Editing an asciidoc (adoc) file in Visual Studio Code, you need to transform the file into something consumable. You can however preview the file while editing it so that you have a good understanding of the actual output.
 
 TIP: The adoc file is rendered by Github so you can point to it and share the link and it can be consumed without having to first needing to install an IDE. Just like the file you are reading now.
 
@@ -128,7 +131,7 @@ TIP: The adoc file is rendered by Github so you can point to it and share the li
 
 You will need to install the command line toolchain and use a very few but easy command to transform the adoc file into one or more of the mentioned formats above.
 
-.Before you install ascoiidoctor you need to install and activate xcode on your mac.
+.Before you install asciidoctor you need to install and activate xcode on your mac.
 [source, terminal]
 ----
 xcode-select --install
