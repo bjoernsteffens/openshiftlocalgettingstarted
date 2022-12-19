@@ -455,7 +455,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_how_far_can_you_take_openshift_local">How far can you take OpenShift Local?</a></li>
 <li><a href="#_appendix_asciidoctor">Appendix - AsciiDoctor</a>
 <ul class="sectlevel2">
-<li><a href="#_what_is_asciidoc">What is AsciiDoc</a></li>
+<li><a href="#_what_is_asciidoc">What is AsciiDoc?</a></li>
 <li><a href="#_how_do_you_edit_and_preview_asciidoc_files">How do you edit and preview asciidoc files?</a></li>
 <li><a href="#_what_is_the_asciidoc_toolchain">What is the asciidoc toolchain?</a></li>
 </ul>
@@ -468,7 +468,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <h2 id="_why_openshift_local">Why OpenShift local?</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>If you can run it on your laptop, it is designed for testing, trying things out and learn without having to have access to a larger Cloud setup. Think of it a little bit as a community edition for your own private purpose that you always have in your computer bag. Yes, you will need to find out by installing it, if you have sufficient resources to start it on your laptop.</p>
+<p>If you can start it on your laptop, it is designed for testing, trying things out and learn without having to have access to a larger Cloud setup. Think of it a little bit as a community edition for your own private purpose that you always have in your computer bag. Yes, you will need to find out by installing it, if you have sufficient resources to run it on your laptop.</p>
 </div>
 </div>
 </div>
@@ -476,7 +476,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <h2 id="_prerequisites_for_installing_openshift_local">Prerequisites for installing OpenShift local</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The hardware requirements are very low but that does not guarantee that OpenShift Local will start on your system. I have two MacBooks, one with Intel CPUs, 64 GB RAM and an M1 with only 16 GB RAM. OpenShift does not launch on my M1 highly likely to insufficient resources as I have a few other things running on it next to an OpenShift local cluster.</p>
+<p>The hardware requirements are low but that does not guarantee that OpenShift local will start on your system. I have two MacBooks, one with Intel CPUs, 64 GB RAM and an M1 with only 16 GB RAM. OpenShift does not launch on my M1 highly likely to insufficient resources as I have a few other things running on it next to an OpenShift local cluster.</p>
 </div>
 <div class="paragraph">
 <p>The best thing you can do because the installation is so easy, is to install it and see if it starts or not and then you have your answer within minutes.</p>
@@ -500,18 +500,26 @@ The old name of OpenShift Local is CRC (Code Ready Containers). You will see ref
 <p><a href="https://developers.redhat.com/products/openshift-local/overview">Overview</a></p>
 </li>
 <li>
-<p><a href="https://crc.dev/crc/">RedHat Getting Started Guide</a></p>
+<p><a href="https://crc.dev/crc/">OpenShift Getting Started Guide</a></p>
 </li>
 <li>
-<p><a href="https://access.redhat.com/documentation/en-us/red_hat_openshift_local/2.11/html/getting_started_guide/installation_gsg">Installation</a></p>
+<p><a href="https://access.redhat.com/documentation/en-us/red_hat_openshift_local/2.12/html/getting_started_guide/installation_gsg">Installation</a></p>
 </li>
 <li>
-<p><a href="https://access.redhat.com/documentation/en-us/red_hat_openshift_local/2.11#configuring-the-instance_gsg">Product Documentation</a></p>
+<p><a href="https://access.redhat.com/documentation/en-us/red_hat_openshift_local/2.12#configuring-the-instance_gsg">Product Documentation</a></p>
 </li>
 </ul>
 </div>
 <div class="paragraph">
 <p>In essence this is what you need to be able to launch OpenShift Local</p>
+</div>
+<div class="ulist">
+<div class="title">Software Resources:</div>
+<ul>
+<li>
+<p>Xcode when you install on a Mac</p>
+</li>
+</ul>
 </div>
 <div class="ulist">
 <div class="title">Hardware Resources:</div>
@@ -533,13 +541,13 @@ The old name of OpenShift Local is CRC (Code Ready Containers). You will see ref
 <h2 id="_locating_and_downloading_the_code">Locating and downloading the code</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>You will need a RedHat subscription to be able to download the code.</p>
+<p>You will need an active RedHat subscription to be able to download the code.</p>
 </div>
 <div class="paragraph">
-<p>Have your RedHat login ready (parter account) and go to this link and download the appropriate package for your laptop OS. Mind to also download the pull secret. You will need it during the installation.</p>
+<p>Have your RedHat login ready and go to this link and download the appropriate package for your laptop OS. Mind to also download the pull secret. You will need it during the installation.</p>
 </div>
 <div class="paragraph">
-<p><a href="https://access.redhat.com/documentation/en-us/red_hat_openshift_local/2.5/html/getting_started_guide/installation_gsg">Software Download</a></p>
+<p><a href="https://console.redhat.com/openshift/create/local">Software Download</a></p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -552,7 +560,7 @@ The old name of OpenShift Local is CRC (Code Ready Containers). You will see ref
 <h2 id="_installing_openshift_local">Installing OpenShift local</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The installation is very simple and consists of 1) the installation and 2) configuration. The configuration part can take several minutes to complete depending how powerful our laptop is. On my MacBook Pro 16" it took approximately 15 Minutes to complete the second configuration part before I could start and access the "mini cluster".</p>
+<p>The installation is very simple and consists of 1) the installation and 2) configuration. The configuration part can take several minutes to complete depending how powerful our laptop is. On my MacBook Pro 16" it took approximately 15 Minutes to complete the configuration part before I could start and access the "mini cluster".</p>
 </div>
 <div class="admonitionblock tip">
 <table>
@@ -711,7 +719,7 @@ rm -rf ~/.crc</code></pre>
 <div class="listingblock">
 <div class="title">Shell command to run to find any remaining lefter overs</div>
 <div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal"># Find the left over first
+<pre class="highlight"><code class="language-sh" data-lang="sh"># Find the left over first
 ls -altr ~/Library | grep -i red
 rm -rf {whatever you find with "redhat"}
 
@@ -733,12 +741,12 @@ rm -rf {whatever you find with "redhat"}
 <h2 id="_appendix_asciidoctor">Appendix - AsciiDoctor</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_what_is_asciidoc">What is AsciiDoc</h3>
+<h3 id="_what_is_asciidoc">What is AsciiDoc?</h3>
 <div class="paragraph">
 <p>AsciiDoc can more than Markdown and lends itself better to technical documentation and collaboration across tools like Github. The syntax is more comprehensive vs Markdown and the learning investment pays off swiftly when your documentation gets complex and intertwined.</p>
 </div>
 <div class="paragraph">
-<p>AsciiDoc is OpenSource but has been around since many years and is getting good traction. There are standardization and communities working the tool contagiously hence it is something worthwhile to look into.</p>
+<p>AsciiDoc is OpenSource but has been around since many years and is getting good traction. There are standardization and communities working the tool contagiously hence it is something worthwhile looking into.</p>
 </div>
 </div>
 <div class="sect2">
@@ -750,7 +758,7 @@ rm -rf {whatever you find with "redhat"}
 <div class="title">Links</div>
 <ul>
 <li>
-<p><a href="https://asciidoc.org/" class="bare">https://asciidoc.org/</a> [AsciiDoc]</p>
+<p><a href="https://asciidoc.org/">AsciiDoc</a></p>
 </li>
 <li>
 <p><a href="https://asciidoctor.org/">Asciidoctor</a></p>
@@ -767,7 +775,7 @@ rm -rf {whatever you find with "redhat"}
 <div class="sect2">
 <h3 id="_what_is_the_asciidoc_toolchain">What is the asciidoc toolchain?</h3>
 <div class="paragraph">
-<p>Editing an asciidoc (adoc) file in Visual Studio Code, you need to transform the file into something consumable. You can however preview the file while editing it so that you have a good understanding of the actual output.</p>
+<p>Editing an asciidoc (adoc) file in Visual Studio Code, you need to transform the file into something consumable for your audience. You can however preview the file while editing it in Visual Studio Code so that you have a good understanding of the final output.</p>
 </div>
 <div class="admonitionblock tip">
 <table>
@@ -801,7 +809,7 @@ The adoc file is rendered by Github so you can point to it and share the link an
 <div class="listingblock">
 <div class="title">Before you install asciidoctor you need to install and activate xcode on your mac.</div>
 <div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">xcode-select --install
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">sudo xcode-select --install
 sudo xcode-select -r
 sudo xcodebuild -license</code></pre>
 </div>
@@ -810,7 +818,7 @@ sudo xcodebuild -license</code></pre>
 <div class="title">Installation instructions</div>
 <ul>
 <li>
-<p><a href="https://docs.asciidoctor.org/asciidoctor/latest/install/macos/">Getting the toolchain installed</a></p>
+<p><a href="https://docs.asciidoctor.org/asciidoctor/latest/install/macos/">Getting the toolchain installed on a Mac</a></p>
 </li>
 </ul>
 </div>
@@ -847,7 +855,7 @@ sudo gem install asciidoctor-epub3</code></pre>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2022-12-17 07:37:03 +0100
+Last updated 2022-12-19 09:07:12 +0100
 </div>
 </div>
 </body>

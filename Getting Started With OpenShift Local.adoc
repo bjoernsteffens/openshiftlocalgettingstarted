@@ -5,11 +5,11 @@ Bjoern Steffens | December 2022
 :toc: left
 
 == Why OpenShift local?
-If you can run it on your laptop, it is designed for testing, trying things out and learn without having to have access to a larger Cloud setup. Think of it a little bit as a community edition for your own private purpose that you always have in your computer bag. Yes, you will need to find out by installing it, if you have sufficient resources to start it on your laptop.
+If you can start it on your laptop, it is designed for testing, trying things out and learn without having to have access to a larger Cloud setup. Think of it a little bit as a community edition for your own private purpose that you always have in your computer bag. Yes, you will need to find out by installing it, if you have sufficient resources to run it on your laptop.
 
 
 == Prerequisites for installing OpenShift local
-The hardware requirements are very low but that does not guarantee that OpenShift Local will start on your system. I have two MacBooks, one with Intel CPUs, 64 GB RAM and an M1 with only 16 GB RAM. OpenShift does not launch on my M1 highly likely to insufficient resources as I have a few other things running on it next to an OpenShift local cluster.
+The hardware requirements are low but that does not guarantee that OpenShift local will start on your system. I have two MacBooks, one with Intel CPUs, 64 GB RAM and an M1 with only 16 GB RAM. OpenShift does not launch on my M1 highly likely to insufficient resources as I have a few other things running on it next to an OpenShift local cluster.
 
 The best thing you can do because the installation is so easy, is to install it and see if it starts or not and then you have your answer within minutes.
 
@@ -17,9 +17,9 @@ TIP: The old name of OpenShift Local is CRC (Code Ready Containers). You will se
 
 .Links:
 - https://developers.redhat.com/products/openshift-local/overview[Overview]
-- https://crc.dev/crc/[RedHat Getting Started Guide]
-- https://access.redhat.com/documentation/en-us/red_hat_openshift_local/2.11/html/getting_started_guide/installation_gsg[Installation]
-- https://access.redhat.com/documentation/en-us/red_hat_openshift_local/2.11#configuring-the-instance_gsg[Product Documentation]
+- https://crc.dev/crc/[OpenShift Getting Started Guide]
+- https://access.redhat.com/documentation/en-us/red_hat_openshift_local/2.12/html/getting_started_guide/installation_gsg[Installation]
+- https://access.redhat.com/documentation/en-us/red_hat_openshift_local/2.12#configuring-the-instance_gsg[Product Documentation]
 
 In essence this is what you need to be able to launch OpenShift Local
 
@@ -32,16 +32,16 @@ In essence this is what you need to be able to launch OpenShift Local
 * 35 GB of storage space
 
 == Locating and downloading the code
-You will need a RedHat subscription to be able to download the code. 
+You will need an active RedHat subscription to be able to download the code. 
 
-Have your RedHat login ready (parter account) and go to this link and download the appropriate package for your laptop OS. Mind to also download the pull secret. You will need it during the installation.
+Have your RedHat login ready and go to this link and download the appropriate package for your laptop OS. Mind to also download the pull secret. You will need it during the installation.
 
-https://access.redhat.com/documentation/en-us/red_hat_openshift_local/2.5/html/getting_started_guide/installation_gsg[Software Download]
+https://console.redhat.com/openshift/create/local[Software Download]
 
 image::./images/software_download.jpg[alt=ls,width=720,height=480]
 
 == Installing OpenShift local
-The installation is very simple and consists of 1) the installation and 2) configuration. The configuration part can take several minutes to complete depending how powerful our laptop is. On my MacBook Pro 16" it took approximately 15 Minutes to complete the second configuration part before I could start and access the "mini cluster".
+The installation is very simple and consists of 1) the installation and 2) configuration. The configuration part can take several minutes to complete depending how powerful our laptop is. On my MacBook Pro 16" it took approximately 15 Minutes to complete the configuration part before I could start and access the "mini cluster".
 
 TIP: Once you have installed xcode and OpenShift local I recommend to reboot your Mac before you start everything.
 
@@ -93,7 +93,7 @@ rm -rf ~/.crc
 - ~/Library/Saved Application State/
 
 .Shell command to run to find any remaining lefter overs
-[source,terminal]
+[source,sh]
 ----
 # Find the left over first
 ls -altr ~/Library | grep -i red
@@ -108,22 +108,22 @@ Recently Rhett Widurski and Michael Klug hosted a few great education sessions t
 
 
 == Appendix - AsciiDoctor
-=== What is AsciiDoc
+=== What is AsciiDoc?
 AsciiDoc can more than Markdown and lends itself better to technical documentation and collaboration across tools like Github. The syntax is more comprehensive vs Markdown and the learning investment pays off swiftly when your documentation gets complex and intertwined.
 
-AsciiDoc is OpenSource but has been around since many years and is getting good traction. There are standardization and communities working the tool contagiously hence it is something worthwhile to look into.
+AsciiDoc is OpenSource but has been around since many years and is getting good traction. There are standardization and communities working the tool contagiously hence it is something worthwhile looking into.
 
 === How do you edit and preview asciidoc files?
 There are plugins to a few IDEs and the most prominent one is Visual Studio Code, where you can edit and live-preview the content. See AsciiDoc toolchain below how to convert an adoc file into other various formats.
 
 .Links
-- https://asciidoc.org/ [AsciiDoc]
+- https://asciidoc.org/[AsciiDoc]
 - https://asciidoctor.org/[Asciidoctor]
 - https://docs.asciidoctor.org/asciidoctor/latest/[Documentation]
 - https://kate-editor.org/syntax/data/html/asciidoc.adoc.html[Comprehensive Cheat-Sheet and Sample file]
 
 === What is the asciidoc toolchain?
-Editing an asciidoc (adoc) file in Visual Studio Code, you need to transform the file into something consumable. You can however preview the file while editing it so that you have a good understanding of the actual output.
+Editing an asciidoc (adoc) file in Visual Studio Code, you need to transform the file into something consumable for your audience. You can however preview the file while editing it in Visual Studio Code so that you have a good understanding of the final output.
 
 TIP: The adoc file is rendered by Github so you can point to it and share the link and it can be consumed without having to first needing to install an IDE. Just like the file you are reading now.
 
@@ -137,13 +137,13 @@ You will need to install the command line toolchain and use a very few but easy 
 .Before you install asciidoctor you need to install and activate xcode on your mac.
 [source, terminal]
 ----
-xcode-select --install
+sudo xcode-select --install
 sudo xcode-select -r
 sudo xcodebuild -license
 ----
 
 .Installation instructions
-- https://docs.asciidoctor.org/asciidoctor/latest/install/macos/[Getting the toolchain installed]
+- https://docs.asciidoctor.org/asciidoctor/latest/install/macos/[Getting the toolchain installed on a Mac]
 
 
 .Installing the pdf and epub converters
