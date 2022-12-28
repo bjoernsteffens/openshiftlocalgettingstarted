@@ -134,7 +134,7 @@ TIP: The adoc file is rendered by Github so you can point to it and share the li
 
 You will need to install the command line toolchain and use a very few but easy command to transform the adoc file into one or more of the mentioned formats above.
 
-.Before you install asciidoctor you need to install and activate xcode on your mac.
+.Before you install asciidoctor you need to install xcode including the xcode command line tools below:
 [source, terminal]
 ----
 sudo xcode-select --install
